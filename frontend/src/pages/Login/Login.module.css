@@ -1,0 +1,55 @@
+.Login {
+    flex: 1;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    background: var(--navy);
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    background: var(--surface);
+    border-radius: 20px;
+    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.5);
+    color: var(--ink);
+}
+
+.loginCardTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--navy);
+}
+
+.brand { margin: 0 0 8px; font-weight: 800; color: var(--accent); letter-spacing: 0.02em; }
+.loginCardTitle h1 { margin: 0; font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; }
+
+.input { margin-bottom: 12px; }
+
+.submitBtn { width: 100%; margin-top: 8px; padding: 14px; font-size: 1.05rem; }
+
+.switch {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 6px;
+    font: inherit;
+    color: var(--navy);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+.switch:hover { color: var(--accent); }
+
+.error { margin: 0 0 12px; }
+
+.notice { margin: 0 0 12px; color: var(--ok); font-weight: 600; }
