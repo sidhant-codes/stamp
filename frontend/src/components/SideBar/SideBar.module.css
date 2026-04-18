@@ -1,0 +1,75 @@
+.sideBar {
+    width: 260px;
+    flex-shrink: 0;
+    height: 100vh;
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 16px;
+    background: var(--navy);
+    color: #fff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px 28px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--navy-line);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    font: inherit;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.option:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+
+.selected,
+.selected:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-weight: 700;
+}
+
+.logout { margin-top: auto; }
+
+.option:focus-visible { outline-color: #fff; }
+
+@media screen and (max-width: 780px) {
+    .sideBar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 12px 12px 8px;
+    }
+    .brand { padding: 0 4px 12px; margin-bottom: 8px; font-size: 1.05rem; }
+    .nav { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+    .option { padding: 10px 12px; font-size: 0.95rem; }
+    .logout { margin-top: 0; margin-left: auto; }
+}
