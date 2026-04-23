@@ -1,0 +1,16 @@
+.result h3 { margin: 18px 0 6px; font-size: 1rem; }
+.result p, .result ul { margin: 0; line-height: 1.55; }
+.result p { margin-top: 12px; }
+.result ul { padding-left: 20px; }
+
+.result .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 8px; }
+.chips li { padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+.hit { background: rgba(27, 122, 70, 0.12); color: var(--ok); }
+.miss { background: rgba(179, 38, 30, 0.1); color: var(--danger); }
+.rewrite { margin: 6px 0 10px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--paper); border-radius: 0 8px 8px 0; }
+.result .checks { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.checks li { display: flex; gap: 8px; align-items: baseline; }
+.checks li > span:first-child { font-weight: 800; width: 1em; flex: none; }
+.checks small { color: var(--ink-soft); }
+.pass > span:first-child { color: var(--ok); }
+.fail > span:first-child { color: var(--danger); }
