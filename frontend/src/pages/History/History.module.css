@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.item { display: flex; flex-direction: column; gap: 8px; }
+.item .score { font-size: 2.5rem; line-height: 1; }
+.item h2 { margin: 0; font-size: 1rem; overflow-wrap: anywhere; }
+.item p { margin: 0; line-height: 1.5; }
+.item time { margin-top: auto; padding-top: 8px; font-size: 0.85rem; }
+
+.empty { max-width: 40ch; }
+
+.tabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.trend { margin: 0 0 20px; padding: 16px 20px; }
+.trend figcaption { font-size: 0.85rem; margin-bottom: 8px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.preview { max-height: 320px; overflow: auto; font-size: 14px; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.preview h1 { font-size: 20px; }
+.preview h2 { font-size: 14px; text-transform: uppercase; }
