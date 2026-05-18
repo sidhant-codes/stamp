@@ -1,0 +1,48 @@
+.Generator {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.panel h1 { margin: 0 0 20px; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
+
+.field { margin-bottom: 12px; resize: vertical; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+.output {
+    background: #fff;
+    padding: 24px 28px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    line-height: 1.55;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.output h1 { font-size: 28px; margin: 0 0 8px; }
+.output h2 { font-size: 17px; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 2px solid var(--navy); padding-bottom: 4px; margin: 20px 0 8px; }
+.output h3 { font-size: 15px; margin: 12px 0 4px; }
+.output p { margin: 4px 0; }
+.output ul { margin: 4px 0; padding-left: 20px; }
+
+/* Templates: preview only approximates the exported PDF/Word styles (backend services/export.js). */
+.modern h1, .modern h2 { color: #1f2a6b; }
+.modern h2 { border-bottom-color: #1f2a6b; }
+.classic { font-family: Georgia, 'Times New Roman', serif; }
+.classic h1, .classic h1 + p { text-align: center; }
+.classic h2 { color: #000; border-bottom: 1px solid #000; }
+.compact { font-size: 13px; line-height: 1.4; padding: 16px 20px; }
+.compact h1 { font-size: 22px; }
+.compact h2 { font-size: 13px; color: #333; border-bottom: none; margin: 12px 0 4px; }
+
+.templates { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0 0 16px; }
+.templates legend { font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; padding: 0; }
+.templates label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1.5px solid var(--line); border-radius: 999px; cursor: pointer; font-weight: 600; }
+.templates label.picked { border-color: var(--accent); color: var(--accent); }
+.templates input { accent-color: var(--accent); }
+
+.coverage { margin: -8px 0 16px; padding: 10px 14px; background: var(--paper); border-radius: 10px; line-height: 1.5; }
+.coverage p { margin: 0; }
+.coverage .scoreLine { font-size: 1.15rem; margin-bottom: 4px; }
+.up { color: var(--ok); }
