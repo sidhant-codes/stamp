@@ -2,6 +2,10 @@
 
 AI-powered resume analyzer and generator.
 
+**Live demo:** https://stamp-1-4v4a.onrender.com/
+
+> Hosted on Render's free tier, so the first request after a quiet period can take 30–60 seconds while the server wakes up.
+
 Sign up or log in with email + password, then:
 - **Analyzer** – upload a PDF resume + paste a job description → AI match score, feedback, strengths and gaps (saved to history).
 - **ATS checklist** – every analysis also runs free, code-only checks (no AI, no quota): email, phone, standard section headings, length, action-verb bullets, bullets with numbers, one date format, no first-person pronouns.
@@ -42,3 +46,8 @@ Put their email in `ADMIN_EMAILS` (backend `.env`) before they register, or set 
 - CI (`.github/workflows/ci.yml`) runs backend tests + `npm audit`, and frontend tests + build.
 - Tests: `cd backend && npm test`; `cd frontend && npm test` (first run downloads an in-memory MongoDB).
 - Set `TRUST_PROXY` to the number of reverse proxies in front of the API (default 0). Behind a single proxy such as Render use `1`; otherwise per-IP rate limits see the proxy's address (everyone shares one bucket) or can be spoofed.
+
+## Deploy (Render)
+- **Backend** – Web Service, root `backend`, build `npm install`, start `npm start`. Env: `MONGO_URI`, `COHERE_API_KEY`, `JWT_SECRET`, `CLIENT_ORIGIN` (the frontend URL, no trailing slash), `TRUST_PROXY=1`, `ADMIN_EMAILS`, optional `RESEND_API_KEY`.
+- **Frontend** – Static Site, root `frontend`, build `npm install && npm run build`, publish `dist`. Env: `VITE_API_URL` (the backend URL). Add a rewrite `/*` → `/index.html`.
+- **Database** – MongoDB Atlas; allow Render's IPs under Network Access.
