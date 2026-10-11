@@ -25,7 +25,12 @@ app.use(
 );
 app.use(helmet());
 app.use(express.json({ limit: '1mb' }));
-app.use(cors({ origin: CLIENT_ORIGIN, credentials: true }));
+app.use(cors({
+  origin: CLIENT_ORIGIN.includes(',')
+    ? CLIENT_ORIGIN.split(',').map((o) => o.trim())
+    : CLIENT_ORIGIN,
+  credentials: true,
+}));
 
 app.get('/health', (req, res) => {
   const db = mongoose.connection.readyState === 1;
